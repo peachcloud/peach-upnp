@@ -14,3 +14,12 @@ cd peach-upnp
 sudo apt install miniupnpc
 cargo run
 ```
+
+## Building Debian package
+
+Dependencies: [`debcargo`](https://salsa.debian.org/rust-team/debcargo/)
+
+```
+apt install libssl-dev libcurl4-gnutls-dev quilt
+cargo build debcargo
+```
