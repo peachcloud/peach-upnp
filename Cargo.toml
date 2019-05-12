@@ -1,7 +1,20 @@
 [package]
 name = "peach-upnp"
 version = "0.1.0"
+description = "Use Universal Plug and Play (UPnP) to expose your Peach device to the internet via your router."
 authors = ["Michael Williams <michael.williams@enspiral.com>"]
 edition = "2018"
+license = "AGPL-3.0"
+readme = "README.md"
 
 [dependencies]
+
+[package.metadata.deb]
+depends = "$auto miniupnpc"
+section = "net"
+priority = "optional"
+license-file = ["LICENSE", "0"]
+assets = [
+    ["target/release/peach-upnp", "usr/bin/", "755"],
+    ["README.md", "usr/share/doc/peach-upnp/README", "644"],
+]
