@@ -17,9 +17,9 @@ cargo run
 
 ## Building Debian package
 
-Dependencies: [`cargo-deb`](https://github.com/mmstick/cargo-deb)
+Dependencies: [`debcargo`](https://salsa.debian.org/rust-team/debcargo/)
 
-``
-sudo apt install dpkg libc-bin liblzma-dev
-cargo install cargo-deb
+```
+apt install libssl-dev libcurl4-gnutls-dev quilt
+cargo build debcargo
 ```
