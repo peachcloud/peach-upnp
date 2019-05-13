@@ -1,6 +1,0 @@
-rust-peach-upnp (0.1.0-1) unstable; urgency=medium
-
-  * Team upload.
-  * Package peach-upnp 0.1.0 from local path using debcargo 2.3.0-alpha.0
-
- -- Michael Williams <michael.williams@enspiral.com>  Mon, 13 May 2019 11:47:35 +1200
