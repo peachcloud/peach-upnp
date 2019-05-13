@@ -1,7 +1,13 @@
 [package]
 name = "peach-upnp"
 version = "0.1.0"
-authors = ["Michael Williams <michael.williams@enspiral.com>"]
 edition = "2018"
+authors = ["Michael Williams <michael.williams@enspiral.com>"]
+description = "Use Universal Plug and Play (UPnP) to expose your Peach device to the internet via your router."
+license = "AGPL-3.0"
+license-file = "LICENSE"
+repository = "https://github.com/peachcloud/peach-upnp"
+readme = "README.md"
+keywords = []
 
 [dependencies]

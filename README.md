@@ -21,5 +21,6 @@ Dependencies: [`debcargo`](https://salsa.debian.org/rust-team/debcargo/)
 
 ```
 apt install libssl-dev libcurl4-gnutls-dev quilt
-cargo build debcargo
+cargo install --git git://github.com/ahdinosaur/debcargo
+debcargo package peach-upnp --path . --config debcargo.toml
 ```
