@@ -1,0 +1,38 @@
+# copied from https://github.com/rustasync/tide/blob/master/.travis.yml
+
+language: rust
+rust:
+  - stable
+  - nightly
+os: linux
+cache: cargo
+
+matrix:
+  include:
+  - name: cargo doc
+    env: [CACHE_NAME=docs]
+    script:
+    - RUSTDOCFLAGS=-Dwarnings
+      cargo doc --all --all-features --no-deps
+
+  - name: cargo fmt
+    cache: false
+    before_script: rustup component add rustfmt
+    script: cargo --all fmt -- --check
+
+  - name: cargo clippy
+    env: [CACHE_NAME=clippy]
+    before_script: rustup component add clippy
+    script: cargo clippy --all --all-targets -- -Dwarnings
+
+  - name: cargo build --no-default-features
+    env: [CACHE_NAME=no-default-features]
+    script:
+    - cargo build --manifest-path Cargo.toml --no-default-features
+
+  - name: cargo test
+    script: cargo test --all --verbose
+
+notifications:
+  email:
+    on_success: never
